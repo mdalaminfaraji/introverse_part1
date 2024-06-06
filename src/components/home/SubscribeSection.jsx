@@ -42,7 +42,7 @@ const SubscribeSection = () => {
             >
               <CardMedia
                 component="img"
-                image="../../../public/images/subscribeImage.png"
+                image="/images/subscribeImage.png"
                 alt="Room Image"
                 sx={{ borderRadius: "20px" }}
               />

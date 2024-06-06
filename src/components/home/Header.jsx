@@ -53,7 +53,7 @@ const Header = () => {
       >
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <img
-            src="../../../public/images/logo.png"
+            src="/images/logo.png"
             alt="interiorVerse Logo"
             style={{ maxWidth: "150px" }}
           />

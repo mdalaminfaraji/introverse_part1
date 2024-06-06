@@ -22,7 +22,7 @@ const Header = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
-  const isLargeScreen = useMediaQuery(theme.breakpoints.between("lg", "xl"));
+  const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"));
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const styleButton = {
@@ -77,7 +77,7 @@ const Header = () => {
       >
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <img
-            src="../../../public/images/logo.png"
+            src="/images/logo.png"
             alt="interiorVerse Logo"
             style={{ maxWidth: "150px" }}
           />

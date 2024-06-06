@@ -5,7 +5,7 @@ const SweetDreamsSection = () => {
     <Box
       sx={{
         py: 8,
-        backgroundImage: "url(../../../public/images/image.png)", // Replace with actual path
+        backgroundImage: "url(/images/image.png)", // Replace with actual path
         backgroundSize: "cover",
         backgroundPosition: "center",
         color: "#fff",

@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { CgMail } from "react-icons/cg";
 import { PiPhoneCallThin } from "react-icons/pi";
-import bgImage from "../../../public/images/footerImagebg.png";
+import bgImage from "/images/footerImagebg.png";
 import { IoLocationOutline } from "react-icons/io5";
 import { styled } from "@mui/system";
 const CustomTextField = styled(TextField)(({ theme }) => ({
@@ -65,7 +65,7 @@ const Footer = () => {
               <Box sx={{ textAlign: { xs: "left" } }}>
                 <Box sx={{ display: "flex" }}>
                   <img
-                    src="../../../public/images/logo.png"
+                    src="/images/logo.png"
                     alt="interiorVerse Logo"
                     style={{ maxWidth: "150px" }}
                   />
@@ -154,7 +154,7 @@ const Footer = () => {
                 <Grid container spacing={2} sx={{ mt: 2 }}>
                   <Grid item xs={3}>
                     <img
-                      src="../../../public/images/post1.png"
+                      src="/images/post1.png"
                       alt="Recent Post 1"
                       style={{ width: "100%", borderRadius: "8px" }}
                     />
@@ -169,7 +169,7 @@ const Footer = () => {
                 <Grid container spacing={2} sx={{ mt: 2 }}>
                   <Grid item xs={3}>
                     <img
-                      src="../../../public/images/post1.png"
+                      src="/images/post1.png"
                       alt="Recent Post 2"
                       style={{ width: "100%", borderRadius: "8px" }}
                     />
