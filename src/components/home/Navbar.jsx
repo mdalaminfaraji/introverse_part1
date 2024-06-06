@@ -22,7 +22,7 @@ const Header = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
-
+  const isLargeScreen = useMediaQuery(theme.breakpoints.between("lg", "xl"));
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const styleButton = {
@@ -55,7 +55,7 @@ const Header = () => {
   return (
     <Box
       sx={{
-        maxWidth: { xs: "100%", sm: "100%", md: "1300px" },
+        maxWidth: { xs: "95%", sm: "95%", md: "1300px" },
         height: "90px",
         mx: "auto",
         borderRadius: "35px",
@@ -178,32 +178,15 @@ const Header = () => {
             >
               About Us
             </Button>
-            {isMediumScreen ? (
+            <Button
+              sx={styleButton}
+              variant="contained"
+              startIcon={<BsFillTagFill />}
+            >
+              Pricing
+            </Button>
+            {!isMediumScreen && (
               <>
-                <Button
-                  sx={styleButton}
-                  variant="contained"
-                  startIcon={<BsFillTagFill />}
-                >
-                  Pricing
-                </Button>
-                <Button
-                  sx={styleButton}
-                  variant="contained"
-                  startIcon={<CgArrowTopRight />}
-                >
-                  interioXr
-                </Button>
-              </>
-            ) : (
-              <>
-                <Button
-                  sx={styleButton}
-                  variant="contained"
-                  startIcon={<BsFillTagFill />}
-                >
-                  Pricing
-                </Button>
                 <Button
                   sx={styleButton}
                   variant="contained"
@@ -218,20 +201,24 @@ const Header = () => {
                 >
                   WebApp
                 </Button>
-                <Button
-                  sx={styleButton}
-                  variant="contained"
-                  startIcon={<CgArrowTopRight />}
-                >
-                  ios/Android
-                </Button>
-                <Button
-                  sx={styleButton}
-                  variant="contained"
-                  startIcon={<Home />}
-                >
-                  Contact Us
-                </Button>
+                {isLargeScreen && (
+                  <>
+                    <Button
+                      sx={styleButton}
+                      variant="contained"
+                      startIcon={<CgArrowTopRight />}
+                    >
+                      ios/Android
+                    </Button>
+                    <Button
+                      sx={styleButton}
+                      variant="contained"
+                      startIcon={<Home />}
+                    >
+                      Contact Us
+                    </Button>
+                  </>
+                )}
               </>
             )}
             <ModeSwitch />

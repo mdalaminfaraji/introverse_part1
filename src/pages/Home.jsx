@@ -14,7 +14,7 @@ const Home = () => {
         maxWidth: "1440px",
 
         backgroundColor: "#340253", // Replace 'red' with your desired background color
-        borderRadius: "99px",
+        borderRadius: { xs: 0, md: "99px" },
         py: 5,
         margin: "0 auto",
         position: "relative",
